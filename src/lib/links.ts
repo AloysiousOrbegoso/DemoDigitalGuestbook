@@ -1,0 +1,24 @@
+import type { ContactMethod } from "../types/guide";
+
+/** Official Google Maps search URL format. Opens the Maps app on phones. */
+export function mapsSearchUrl(query: string): string {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+const dialable = (v: string) => v.replace(/[^\d+]/g, "");
+
+export function contactHref(m: ContactMethod): string {
+  switch (m.kind) {
+    case "call": return `tel:${dialable(m.value)}`;
+    case "sms": return `sms:${dialable(m.value)}`;
+    case "messenger": return `https://m.me/${encodeURIComponent(m.value)}`;
+    case "email": return `mailto:${m.value}`;
+  }
+}
+
+export const contactIcon: Record<ContactMethod["kind"], string> = {
+  call: "phone",
+  sms: "message",
+  messenger: "brand-messenger",
+  email: "mail",
+};
