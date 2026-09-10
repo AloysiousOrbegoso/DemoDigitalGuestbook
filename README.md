@@ -14,16 +14,16 @@ Deploy: import the repo into Vercel. `vercel.json` is already set up for a stati
 
 ## Build status
 
-| Phase | Status |
-|---|---|
-| 0 Project setup | Done. Vite + React + TS, Tabler webfont, self-hosted fonts (Alegreya + Instrument Sans), `vercel.json` |
-| 1 Data & types | Done. All 12 sections written in `src/data/casaDeVista.ts` |
-| 2 Theme system | Done. Daytime / Golden Hour / Reef, tokens in `src/theme/themes.ts` |
-| 3 Blocks | Done. All 9 block types; clipboard and tel/sms links are real |
-| 4 Mobile shell | Done. Tile grid, section screens, Guide/Places/Host tabs, search |
-| 5 Desktop shell | Done. Sidebar + content pane, live PhoneFrame via the Desktop/Phone toggle |
-| 6 Assets | Not started. Cover is an original SVG illustration placeholder; host shows a monogram; no video block in the data yet |
-| 7 Polish & QA | Partly. Focus rings and reduced motion are in; still needs a real-device pass and deploy |
+| Phase           | Status                                                                                                                |
+| --------------- | --------------------------------------------------------------------------------------------------------------------- |
+| 0 Project setup | Done. Vite + React + TS, Tabler webfont, self-hosted fonts (Alegreya + Instrument Sans), `vercel.json`                |
+| 1 Data & types  | Done. All 12 sections written in `src/data/casaDeVista.ts`                                                            |
+| 2 Theme system  | Done. Daytime / Golden Hour / Reef, tokens in `src/theme/themes.ts`                                                   |
+| 3 Blocks        | Done. All 9 block types; clipboard and tel/sms links are real                                                         |
+| 4 Mobile shell  | Done. Tile grid, section screens, Guide/Places/Host tabs, search                                                      |
+| 5 Desktop shell | Done. Sidebar + content pane, live PhoneFrame via the Desktop/Phone toggle                                            |
+| 6 Assets        | Not started. Cover is an original SVG illustration placeholder; host shows a monogram; no video block in the data yet |
+| 7 Polish & QA   | Partly. Focus rings and reduced motion are in; still needs a real-device pass and deploy                              |
 
 ## Notes for Phase 6 / 7
 
@@ -39,3 +39,4 @@ Deploy: import the repo into Vercel. `vercel.json` is already set up for a stati
 - In Phone view on desktop, the sidebar hides and the phone is centered, rather than the phone sitting inside the content pane beside the sidebar (the sidebar couldn't drive the phone, so it read as broken).
 - Tablets (641–1023px) get the mobile shell, centered at 640px max.
 - On phones the theme switcher collapses to a single swatch button so it doesn't cover text.
+- image changed
